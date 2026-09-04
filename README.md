@@ -78,13 +78,12 @@ Claude Code에서:
   "outDir": "/절대/경로/illustrations",
   "shots": [
     {
-      "file": "01-one-phone-one-account.png",
-      "theme": "One phone, one account",
-      "structure": "System",
-      "core": "Each account lives on its own device, nothing is shared",
-      "composition": "The duck stands at the left end of a long hand-drawn table, plugging a SIM card into the first of five identical phones. Each phone has a separate cloud floating above it, connected by a single thin line. No lines cross between phones.",
-      "labels": "orange handwritten \"폰 하나 계정 하나\" top-left / red handwritten \"공유 없음\" above the middle phones / blue handwritten \"유심 따로\" near the duck's hand"
-    }
+      "file": "05-aged-account-jar.png",
+      "theme": "Warm up an aged account slowly",
+      "structure": "Character state",
+      "core": "Don't change everything at once — warm it up over two weeks",
+      "composition": "The duck sits on a small round stool next to a big glass jar labeled in Korean, lifting the jar's lid with one wing and raising one finger with the other, deadpan. To the right, a row of 14 small hand-drawn calendar boxes runs across the canvas — only the first two are checked.",
+      "labels": "red handwritten \"한 번에 바꾸지 않기\" left of the jar / blue handwritten \"묵힌 계정\" on the jar label / orange handwritten \"14일 워밍업\" under the calendar row"
   ]
 }
 ```
