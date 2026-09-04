@@ -1,0 +1,11 @@
+{
+  "name": "hypeduck-illustrations",
+  "version": "1.0.0",
+  "description": "글·대본·개념을 흰 배경 손그림 오리 일러스트(한국어 손글씨 주석 포함)로 만들어주는 스킬. 블로그·유튜브·스레드 본문 삽화와 PPT용 낱장 이미지에 사용.",
+  "author": { "name": "HypeDuck", "url": "https://www.hypeduck.ai" },
+  "homepage": "https://github.com/hedgehogcandy/hypeduck-illustrations",
+  "repository": "https://github.com/hedgehogcandy/hypeduck-illustrations",
+  "license": "MIT",
+  "keywords": ["illustration", "image-generation", "korean", "openrouter", "gemini", "duck", "content"],
+  "skills": "./skills/"
+}
