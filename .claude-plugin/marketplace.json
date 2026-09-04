@@ -2,14 +2,21 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "hypeduck",
   "description": "HypeDuck의 콘텐츠 제작용 Claude Code 플러그인",
-  "owner": { "name": "HypeDuck", "url": "https://github.com/hedgehogcandy" },
+  "owner": {
+    "name": "HypeDuck",
+    "url": "https://github.com/hedgehogcandy"
+  },
   "plugins": [
     {
       "name": "hypeduck-illustrations",
       "source": "./",
-      "description": "글을 흰 배경 손그림 오리 일러스트로 만들어주는 스킬 (OpenRouter + Gemini 3 Pro Image)",
+      "description": "글을 흰 배경 손그림 오리 일러스트로 만들어주는 스킬 (프롬프트 정본 내장, API 키 불필요)",
       "category": "content",
-      "keywords": ["illustration", "image-generation", "korean"]
+      "keywords": [
+        "illustration",
+        "image-generation",
+        "korean"
+      ]
     }
   ]
 }

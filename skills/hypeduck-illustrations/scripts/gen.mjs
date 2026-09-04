@@ -21,19 +21,15 @@ function apiKey() {
   throw new Error('OPENROUTER_API_KEY 필요 — export OPENROUTER_API_KEY=sk-or-... (또는 ./.env, ~/.hypeduck.env)')
 }
 
-const DNA = `Generate one standalone 16:9 horizontal Korean article illustration.
-
-Visual DNA:
-Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten KOREAN annotations (Hangul, 2-4 words each, at most 4 labels total). Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no children's illustration, no realistic UI.
-
-Recurring IP character required:
-A small chubby duck mascot whose FACE must match the attached reference logo image: bright yellow (#FFD400) round head and body with a thin black hand-drawn outline, flat orange (#FF8A00) beak, two large black oval eyes with small white highlights, tiny pink blush cheeks, one small feather tuft on top of the head, tiny thin black legs. Flat solid yellow fill, no gradients or gloss. The duck is the ONLY element with large colored fill — everything else in the scene stays black thin-line art on white. The duck must perform the core conceptual action, not decorate the scene. Keep the duck deadpan, serious, slightly bizarre — a hardworking absurd worker, not a cute sticker.`
-
-const TAIL = `Color use:
-Black for main line art. Yellow/orange only for the duck character itself. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or system state.
-
-Constraints:
-One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. All handwritten labels must be in KOREAN (Hangul), spelled exactly as given — do not invent extra text, do not write any Chinese or English words. Do not write a title in the top-left corner. Do not make it a formal diagram, course slide, or dense explainer. It should be clear but not instructional, interesting but not childish, strange but clean.`
+const PROMPT_MD = path.join(HERE, '..', 'PROMPT.md')
+function section(name) {
+  const md = fs.readFileSync(PROMPT_MD, 'utf8')
+  const m = md.match(new RegExp('## ' + name + '\\n\\n```text\\n([\\s\\S]*?)\\n```'))
+  if (!m) throw new Error(`PROMPT.md에 "## ${name}" 블록이 없다`)
+  return m[1]
+}
+const DNA = section('DNA')
+const TAIL = section('RULES')
 
 const [specPath, ...pickArgs] = process.argv.slice(2)
 if (!specPath) { console.error('usage: node gen.mjs <shots.json> [번호...]'); process.exit(1) }
