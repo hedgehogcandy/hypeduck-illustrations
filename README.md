@@ -84,6 +84,7 @@ Claude Code에서:
       "core": "Don't change everything at once — warm it up over two weeks",
       "composition": "The duck sits on a small round stool next to a big glass jar labeled in Korean, lifting the jar's lid with one wing and raising one finger with the other, deadpan. To the right, a row of 14 small hand-drawn calendar boxes runs across the canvas — only the first two are checked.",
       "labels": "red handwritten \"한 번에 바꾸지 않기\" left of the jar / blue handwritten \"묵힌 계정\" on the jar label / orange handwritten \"14일 워밍업\" under the calendar row"
+    }
   ]
 }
 ```
