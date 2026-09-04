@@ -17,14 +17,17 @@
 
 ## ChatGPT에서 쓰기 (가장 쉬움)
 
-1. [PROMPT.md](skills/hypeduck-illustrations/PROMPT.md)의 **DNA 블록**을 복사해서 붙여넣는다.
-2. [마스코트 이미지](skills/hypeduck-illustrations/assets/hypeduck-logo.png)를 같이 **첨부**한다 (얼굴을 매번 똑같이 유지하는 핵심).
-3. 그리려는 장면을 5칸으로 적는다 — Theme / Structure type / Core idea / Composition / Korean handwritten labels.
-4. **RULES 블록**을 마지막에 붙인다.
+1. [PROMPT.md](skills/hypeduck-illustrations/PROMPT.md)의 **CHARACTER 블록**을 복사해서 붙여넣는다.
+2. 그리려는 장면을 5칸으로 적는다 — Theme / Structure type / Core idea / Composition / Korean handwritten labels.
+3. **STYLE 블록**을 마지막에 붙인다.
+
+CHARACTER 블록이 오리 생김새를 눈 크기·부리 폭·머리깃 개수까지 문장으로 못박기 때문에
+**이미지를 첨부하지 않아도 같은 오리가 나온다.** 더 확실하게 고정하고 싶으면
+[마스코트 이미지](skills/hypeduck-illustrations/assets/hypeduck-logo.png)를 같이 첨부하면 된다.
 
 매번 붙여넣기 귀찮으면 [chatgpt-instructions.md](chatgpt-instructions.md)를 ChatGPT **프로젝트 지침**이나
-**Custom GPT의 Instructions**에 통째로 넣고 마스코트 PNG를 지식 파일로 올려두면, 그다음부터는
-"이 글로 일러스트 3장 뽑아줘"만 하면 된다.
+**Custom GPT의 Instructions**에 통째로 넣어두면, 그다음부터는 "이 글로 일러스트 3장 뽑아줘"만 하면 된다.
+마스코트 PNG까지 그 프로젝트에 올려두면 얼굴이 한층 더 안정적으로 붙는다.
 
 ## Claude Code에서 쓰기 (스킬/플러그인)
 
@@ -52,8 +55,8 @@ cp -R hypeduck-illustrations/skills/hypeduck-illustrations ~/.claude/skills/
 
 ## 다른 도구에서 쓰기
 
-Gemini·Midjourney·Firefly 등도 같다 — DNA + 장면 5칸 + RULES를 붙여넣고 마스코트 이미지를 레퍼런스로 준다.
-이미지 첨부가 안 되는 도구에서는 얼굴이 조금씩 흔들리니, DNA 안의 오리 묘사 문장을 더 자세히 적어 보정한다.
+Gemini·Midjourney·Firefly 등도 같다 — CHARACTER + 장면 5칸 + STYLE을 그대로 붙여넣는다.
+이미지 첨부를 지원하는 도구라면 마스코트 PNG도 같이 주면 된다.
 
 ---
 
@@ -65,7 +68,7 @@ Gemini·Midjourney·Firefly 등도 같다 — DNA + 장면 5칸 + RULES를 붙�
 | 그림이 설명서처럼 빽빽함 | 한 장에 메시지 하나만. 장을 쪼갠다 |
 | 오리가 그냥 서 있기만 함 | 오리가 **핵심 동작의 주체**가 되게 Composition을 다시 쓴다 |
 | 영어·중국어가 섞여 새겨짐 | labels에 한국어만 쓴다 |
-| 얼굴이 매번 다름 | 마스코트 PNG를 반드시 첨부한다 |
+| 얼굴이 조금씩 다름 | CHARACTER 블록을 통째로 넣었는지 확인. 그래도 흔들리면 마스코트 PNG를 첨부한다 |
 
 ## 라이선스
 

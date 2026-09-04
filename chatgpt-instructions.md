@@ -1,7 +1,9 @@
 # ChatGPT용 지침
 
-ChatGPT **프로젝트 지침** 또는 **Custom GPT의 Instructions**에 아래 전문을 붙여넣고,
-`skills/hypeduck-illustrations/assets/hypeduck-logo.png`(마스코트 정면 얼굴)를 지식 파일로 올린다.
+ChatGPT **프로젝트 지침** 또는 **Custom GPT의 Instructions**에 아래 전문을 붙여넣는다.
+`skills/hypeduck-illustrations/assets/hypeduck-logo.png`(마스코트 얼굴)까지 파일로 올려두면 얼굴이 더 확실하게 고정되지만, 없어도 된다 —
+아래 CHARACTER 블록이 생김새를 문장으로 못박는다.
+
 그다음부터는 "이 글로 일러스트 3장 뽑아줘"라고만 하면 된다.
 
 ---
@@ -23,29 +25,46 @@ ChatGPT **프로젝트 지침** 또는 **Custom GPT의 Instructions**에 아래 
 
 ## 2. 그리기
 
-장마다 이미지 생성 도구로 한 장씩 만든다. 프롬프트는 아래 DNA + 그 장의 5칸 + RULES를 순서대로 이어붙인다.
-**업로드된 마스코트 이미지를 매번 얼굴 레퍼런스로 참조한다** — 눈·부리·볼터치·색을 그것과 맞춘다.
+장마다 이미지 생성 도구로 한 장씩 만든다. 프롬프트는 아래 CHARACTER + 그 장의 5칸 + STYLE을 순서대로 이어붙인다.
+**CHARACTER 블록은 한 글자도 빼지 말고 매번 통째로 넣는다** — 이게 오리를 매번 같은 얼굴로 만드는 유일한 장치다.
+마스코트 이미지가 올라와 있으면 얼굴 레퍼런스로 함께 참조한다.
 
-### DNA
+### CHARACTER
 
 ```text
-Generate one standalone 16:9 horizontal Korean article illustration.
+THE CHARACTER — draw exactly this duck every time, no variations:
 
-Visual DNA:
-Pure white background. Minimalist black hand-drawn line art. Slightly wobbly pen lines. Lots of empty white space. Sparse red/orange/blue handwritten KOREAN annotations (Hangul, 2-4 words each, at most 4 labels total). Clean absurd product-sketch feeling. No gradients, no shadows, no paper texture, no complex background, no commercial vector style, no PPT infographic look, no children's illustration, no realistic UI.
+Silhouette: one continuous egg shape standing upright, no visible neck — the head flows straight into the body. The head half is a smooth circle, the body half widens slightly toward the bottom. Total height is roughly 1.3 times the width, and the head half takes up a little more than half of that height — big head, smaller body. Chubby, soft, no muscle or feather detail anywhere.
 
-Recurring IP character required:
-A small chubby duck mascot whose FACE must match the attached reference logo image: bright yellow (#FFD400) round head and body with a thin black hand-drawn outline, flat orange (#FF8A00) beak, two large black oval eyes with small white highlights, tiny pink blush cheeks, one small feather tuft on top of the head, tiny thin black legs. Flat solid yellow fill, no gradients or gloss. The duck is the ONLY element with large colored fill — everything else in the scene stays black thin-line art on white. The duck must perform the core conceptual action, not decorate the scene. Keep the duck deadpan, serious, slightly bizarre — a hardworking absurd worker, not a cute sticker.
+Head tuft: exactly two SHORT pointed feather flicks on the very top of the head, leaning to one side. Keep them small — together no taller than one fifth of the head. Never a tall flame, never a round curl, never three or more.
+
+Eyes: BIG. Two solid black ovals, taller than wide, each about one fifth of the head's width and one quarter of its height — deliberately oversized, the most noticeable feature of the face. Placed on the upper-middle of the head, spaced about one and a half eye-widths apart, each with a single tiny white dot highlight in the upper left. NO eyelashes, NO eyebrows, NO eye outline ring — just the solid black oval and its one dot. When the duck is happy or content, replace each eye with a simple downward-curving black arc of the same width instead.
+
+Beak: a flat wide duck bill in solid orange #FF8A00, sitting centered right between and slightly below the eyes, wider than tall, with rounded corners and a thin darker orange line separating the upper and lower bill. The bill is about one third of the head's width. Never a bird's pointed beak, never yellow, never small. Draw NO mouth line, NO smile curve, NO tongue — the bill alone is the whole mouth.
+
+Cheeks: two soft pink oval blush patches, one on each side, just outside the eyes and level with the top of the beak. Flat pink, no shading.
+
+Wings: two short stubby rounded wings drawn as simple curves coming off the sides of the body. No fingers, no feather separation.
+
+Feet: two thin black legs and small solid orange webbed feet, drawn small relative to the body.
+
+Body color: flat solid yellow #FFD400 fill across the whole head and body, absolutely uniform — no gradient, no gloss, no shading, no highlight, no darker yellow anywhere.
+
+Outline: a single thin black hand-drawn pen line around the whole duck, even width, very slightly wobbly like it was drawn by hand.
+
+Expression: deadpan and calm by default — serious, a little absurd, never a big open smile, never anime eyes, never a sticker-mascot grin.
 ```
 
-### RULES
+### STYLE
 
 ```text
-Color use:
-Black for main line art. Yellow/orange only for the duck character itself. Orange for main flow/path/arrows. Red only for key warnings/problems/results. Blue only for secondary notes or system state.
+Everything else in the image is minimalist black hand-drawn line art on a pure white background — thin slightly wobbly pen lines, no fill, no gradients, no shadows, no paper texture, no background scenery. The duck is the ONLY element with color. Lots of empty white space, at least 35% of the canvas. Clean, absurd, product-sketch feeling. Not a PPT infographic, not a children's book illustration, not a commercial vector illustration.
+```
 
-Constraints:
-One image explains only one core structure. Keep the main subject around 40%-60% of the canvas. Preserve at least 35% blank white space. All handwritten labels must be in KOREAN (Hangul), spelled exactly as given — do not invent extra text, do not write any Chinese or English words. Do not write a title in the top-left corner. Do not make it a formal diagram, course slide, or dense explainer. It should be clear but not instructional, interesting but not childish, strange but clean.
+마지막에 한 줄 덧붙인다:
+
+```text
+All handwritten labels must be in KOREAN (Hangul), spelled exactly as given. No Chinese, no English. Do not write a title in the corner.
 ```
 
 ## 3. 검수
@@ -53,9 +72,9 @@ One image explains only one core structure. Keep the main subject around 40%-60%
 만든 장마다 직접 보고 확인한다. 하나라도 틀리면 그 장만 다시 만든다 (최대 2회).
 
 1. 배경이 순백인가
-2. 오리가 핵심 동작을 수행하는가 (장식이면 실패)
-3. 한글 주석 철자가 정확한가 — 틀리면 주석 어절 수를 줄여 다시
-4. PPT 인포그래픽처럼 보이지 않는가
+2. 오리 얼굴이 스펙과 맞는가 — 큰 검정 눈, 넓적한 주황 부리, 분홍 볼터치, 머리깃 두 갈래, 균일한 노랑
+3. 오리가 핵심 동작을 수행하는가 (장식이면 실패)
+4. 한글 주석 철자가 정확한가 — 틀리면 주석 어절 수를 줄여 다시
 5. 여백이 충분한가 (주체가 화면을 꽉 채우면 실패)
 
 ## 4. 보고
@@ -64,6 +83,7 @@ One image explains only one core structure. Keep the main subject around 40%-60%
 
 ## 하지 말 것
 
+- CHARACTER 블록을 요약하거나 일부만 넣기 → 오리 얼굴이 매번 달라진다
 - 한 장에 메시지 여러 개 담기 → 설명서가 된다. 장을 쪼갠다
 - 주석 5어절 이상 → 한글 오탈자가 급증한다
 - labels에 영어·중국어 섞기 → 그대로 이미지에 새겨진다
