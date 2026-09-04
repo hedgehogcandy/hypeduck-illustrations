@@ -57,11 +57,6 @@ Gemini·Midjourney·Firefly 등도 같다 — DNA + 장면 5칸 + RULES를 붙�
 
 ---
 
-## 마스코트 바꾸기
-
-`skills/hypeduck-illustrations/assets/hypeduck-logo.png`를 네 캐릭터 정면 얼굴 PNG로 갈아끼우고,
-[PROMPT.md](skills/hypeduck-illustrations/PROMPT.md)의 DNA에서 색상·생김새 문장을 고치면 다른 IP로도 쓴다.
-
 ## 잘 나오게 하는 요령
 
 | 증상 | 해법 |
