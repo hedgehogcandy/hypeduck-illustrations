@@ -67,20 +67,6 @@ Gemini·Midjourney·Firefly 등도 같다 — DNA + 장면 5칸 + RULES를 붙�
 | 영어·중국어가 섞여 새겨짐 | labels에 한국어만 쓴다 |
 | 얼굴이 매번 다름 | 마스코트 PNG를 반드시 첨부한다 |
 
-## 자동 생성 (선택)
-
-한 번에 여러 장을 파일로 떨구고 싶으면 스크립트가 하나 들어 있다. 이건 이미지 API 키가 필요하다 —
-안 쓰면 그만이고, 위 방법들만으로 다 된다.
-
-```bash
-export OPENROUTER_API_KEY=sk-or-...   # https://openrouter.ai/keys
-node skills/hypeduck-illustrations/scripts/gen.mjs /절대경로/shots.json
-node skills/hypeduck-illustrations/scripts/gen.mjs /절대경로/shots.json 3 5   # 3·5번만 재생성
-```
-
-`shots.json` 형식과 필드 설명은 [SKILL.md](skills/hypeduck-illustrations/SKILL.md).
-스크립트는 PROMPT.md를 읽어서 쓰므로 프롬프트는 한 군데(PROMPT.md)만 고치면 된다.
-
 ## 라이선스
 
 MIT (코드·프롬프트). 오리 마스코트 이미지는 HypeDuck 브랜드 마크 — [LICENSE](LICENSE) 참고.

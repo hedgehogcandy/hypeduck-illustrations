@@ -4,7 +4,7 @@
 `DNA` → 장면 슬롯(Theme / Structure type / Core idea / Composition / Korean handwritten labels) → `RULES`.
 
 마스코트 얼굴을 일정하게 유지하려면 `assets/hypeduck-logo.png`(또는 네 캐릭터 정면 얼굴)를 **레퍼런스 이미지로 함께 첨부**한다.
-`scripts/gen.mjs`도 이 파일을 읽어서 쓴다 — 프롬프트를 고치려면 여기만 고치면 된다.
+프롬프트를 고칠 일이 있으면 이 파일만 고친다.
 
 ## DNA
 
